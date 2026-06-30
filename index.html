@@ -3,28 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <script src="https://cdn.jsdelivr.net/npm/animejs/dist/bundles/anime.umd.min.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-[#060606]">
-  <div class="fixed left-[50vw] -translate-x-1/2 px-8 py-4 border-2 border-[#464646] rounded-[25px] bg-[#060606] top-8 z-999">
+  <div class="fixed left-1/2 -translate-x-1/2 top-8 border-2 border-[#464646] rounded-[25px] bg-[#060606] z-999 px-8 py-4">
     <div class="flex justify-center items-center text-center text-white gap-8 text-[40px]">
-      <!-- <a><svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="10%" overflow="visible" viewBox="0 0 64 64" fill="none"><path id="Union" d="M64 0C63.287 1.42003 62.556 2.82234 61.8076 4.20703C56.2793 14.4359 49.7853 23.6999 42.3281 32C49.7853 40.3001 56.2793 49.5641 61.8076 59.793C62.556 61.1777 63.287 62.5799 64 64C62.5799 63.287 61.1777 62.556 59.793 61.8076C49.5639 56.2792 40.3002 49.7845 32 42.3271C23.6998 49.7845 14.4361 56.2792 4.20703 61.8076C2.82231 62.556 1.42006 63.287 0 64C0.713035 62.5799 1.444 61.1777 2.19238 59.793C7.72062 49.5643 14.2139 40.3 21.6709 32C14.2139 23.7 7.72063 14.4357 2.19238 4.20703C1.44401 2.82233 0.713025 1.42004 0 0C1.42004 0.713025 2.82233 1.44401 4.20703 2.19238C14.4357 7.72063 23.7 14.2139 32 21.6709C40.3 14.2139 49.5643 7.72061 59.793 2.19238C61.1777 1.44401 62.58 0.713018 64 0Z" fill="var(--fill-0, #DE4747)"/></svg></a> -->
-      <a>Home</a>
-      <a>About</a>
-      <a>Work</a>
-      <a>Contact</a>
+      <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="48" height="48" viewBox="0 0 64 64" fill="none"><path id="Union" d="M64 0C63.287 1.42003 62.556 2.82234 61.8076 4.20703C56.2793 14.4359 49.7853 23.6999 42.3281 32C49.7853 40.3001 56.2793 49.5641 61.8076 59.793C62.556 61.1777 63.287 62.5799 64 64C62.5799 63.287 61.1777 62.556 59.793 61.8076C49.5639 56.2792 40.3002 49.7845 32 42.3271C23.6998 49.7845 14.4361 56.2792 4.20703 61.8076C2.82231 62.556 1.42006 63.287 0 64C0.713035 62.5799 1.444 61.1777 2.19238 59.793C7.72062 49.5643 14.2139 40.3 21.6709 32C14.2139 23.7 7.72063 14.4357 2.19238 4.20703C1.44401 2.82233 0.713025 1.42004 0 0C1.42004 0.713025 2.82233 1.44401 4.20703 2.19238C14.4357 7.72063 23.7 14.2139 32 21.6709C40.3 14.2139 49.5643 7.72061 59.793 2.19238C61.1777 1.44401 62.58 0.713018 64 0Z" fill="var(--fill-0, #DE4747)"/></svg>
+      <a href="#" class="transition-colors duration-200 hover:text-neutral-400">Home</a>
+      <a href="#" class="transition-colors duration-200 hover:text-neutral-400">About</a>
+      <a href="#" class="transition-colors duration-200 hover:text-neutral-400">Work</a>
+      <a href="#" class="transition-colors duration-200 hover:text-neutral-400">Contact</a>
     </div>
   </div>
 
-  <main class="flex flex-col px-10 relative ">
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden" id="Home">
-      <span class="text-white text-5xl">Where Dreams become Reality</span>
-      <p class="text-slate-200/70">Hello, I'm Kian Verdugo.</p>
+  <main class="relative">
+    <section class="relative min-h-screen flex items-center justify-center" id="Home">
+      <div>
+        <h1 class="font-kavoon max-w-[1030px] text-[96px] leading-30 text-white font-bold">
+          <span class="text-[#DE4747]">Magical</span>
+          <span>Ideas</span>
+          <span><br>Professional</span>
+          <span class="text-[#DE4747]">Products</span>
+        </h1>
+        <p class="text-slate-200/70 text-[48px]">Hi, I’m Kian Verdugo. I design the unique,<br> code the future, and build the impossible.</p>
+      </div>
+
+      <a class="flex items-center gap-6 bg-[#060606] border border-[#464646] rounded-[50px] px-8 py-4" href="CV_en.pdf" download="CV_en.pdf">
+        <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="36" height="36" style="display: block;" viewBox="0 0 42.4938 42.65" fill="none"><path id="Vector" d="M21.046 28.7071C21.4365 29.0976 22.0697 29.0976 22.4602 28.7071L28.8242 22.3431C29.2147 21.9526 29.2147 21.3195 28.8242 20.9289C28.4336 20.5384 27.8005 20.5384 27.4099 20.9289L21.7531 26.5858L16.0962 20.9289C15.7057 20.5384 15.0725 20.5384 14.682 20.9289C14.2915 21.3195 14.2915 21.9526 14.682 22.3431L21.046 28.7071ZM21.7531 0H20.7531V28H21.7531H22.7531V0H21.7531ZM1.50617 41.65V42.65H42V41.65V40.65H1.50617V41.65ZM41.4938 42H42.4938V28H41.4938H40.4938V42H41.4938ZM1 42H2V28H1H0V42H1Z" fill="var(--stroke-0, #DE4747)"/></svg>
+        <span class="text-white text-[40px]">Download CV</span>
+      </a>
+
+      <img src="/HeadshotCropped.png" class="rounded-3xl w-150"></img>
+
     </section>
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden" id="Home">
+    <section class="relative min-h-screen flex items-center justify-center" id="Home">
       <span class="text-white text-5xl">Where Dreams become Reality</span>
       <p class="text-slate-200/70">Hello, I'm Kian Verdugo.</p>
     </section>
