@@ -19,7 +19,8 @@
   </div>
 
   <main>
-    <section id="Home" class="relative flex min-h-screen items-center justify-between">
+    <!-- Hero Section -->
+    <section id="Home" class="flex min-h-screen items-center justify-between">
       <div class="flex-col">
         <div class="ml-40">
           <h1 class="max-w-[1030px] font-kavoon text-[96px] font-bold leading-30 text-white">
@@ -42,7 +43,8 @@
       <img src="/imgs/HeadshotCropped.png" alt="Kian Verdugo Headshot" class="w-150 rounded-4xl mr-40">
     </section>
     
-    <section class="relative h-auto mt-22 mb-30" id="About">
+    <!-- Has short summaries of tasks I preform -->
+    <section class="h-auto mt-22 mb-30" id="About">
       <h1 class="text-[#DE4747] text-[96px] font-bold flex justify-center">What I do</h1>
 
       <div class="flex justify-center gap-20">
@@ -69,9 +71,10 @@
       </div>
     </section>
 
-    <section class="relative min-h-screen mx-40" id="Work">
+    <section class="min-h-screen mx-40" id="Work">
       <h1 class="text-[#DE4747] text-[96px] font-bold flex justify-start">My Projects</h1>
 
+      <!-- Creates sectioning for every project -->
       <div class="flex-col items-center">
         <div class="border-y border-[#464646] p-32">
           <div class="flex items-center justify-between">
@@ -152,15 +155,60 @@
           </div>
         </div>
       </div>
-      <a href="/Projects.index" class="my-15 flex w-fit items-center justify-center gap-6 rounded-[50px] border border-[#464646] bg-[#060606] px-8 py-4">
+
+      <!-- Load More button -->
+      <a href="/Projects.html" class="my-15 mx-auto flex w-fit items-center justify-center gap-6 rounded-[50px] border border-[#464646] bg-[#060606] px-8 py-4">
         <span class="text-[40px] text-white">Load More</span>
         <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="64" height="100%" overflow="visible" viewBox="0 0 62 29.4558" fill="none">
           <path id="Arrow 1" d="M61.4142 16.1421C62.1953 15.3611 62.1953 14.0948 61.4142 13.3137L48.6863 0.585787C47.9052 -0.195262 46.6389 -0.195262 45.8579 0.585787C45.0768 1.36684 45.0768 2.63317 45.8579 3.41421L57.1716 14.7279L45.8579 26.0416C45.0768 26.8227 45.0768 28.089 45.8579 28.8701C46.6389 29.6511 47.9052 29.6511 48.6863 28.8701L61.4142 16.1421ZM0 14.7279V16.7279H60V14.7279V12.7279H0V14.7279Z" fill="var(--stroke-0, white)"/>
         </svg>
       </a>
     </section>
-    <section>
+
+    <section class="mx-40 my-40" id="Technology">
       <h1 class="text-[#DE4747] text-[96px] font-bold flex justify-center">Current Techstack</h1>
+      <div class="overflow-x-auto my-15 scrollbar-none flex justify-center">
+        <div class="flex flex-row gap-8 animate-bounce">
+          <img src="/imgs/HTML Logo.png" class="w-64">
+          <img src="/imgs/CSS Logo.png" class="w-64">
+          <img src="/imgs/JavaScript Logo.png" class="w-64">
+          <img src="/imgs/Tailwind Logo.png" class="w-64">
+          <img src="/imgs/VSCode Logo.png" class="w-64">
+          <img src="/imgs/Python Logo.png" class="w-64">
+          <img src="/imgs/Git Logo.png" class="w-64">
+          <img src="/imgs/Java Logo.png" class="w-64">
+          <img src="/imgs/AWS Logo.png" class="w-64">
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-70" id="Contact">
+      <div class="border border-[#464646] rounded-t-[25px] text-white">
+        <div class="flex justify-center my-10">
+          <h1 class="text-[82px]">Need help with a creative idea?
+            <br>
+            <span class="text-[82px]">
+              Contact me
+              <a class="text-[#DE4747] underline" href="mailto:Kianverdugo05@gmail.com">via email</a>
+              to collaborate!
+            </span>
+          </h1>
+        </div>
+        <div class="border-t border-t-[#464646] flex justify-between">
+          <div class="mx-20 my-10">
+            <h1 class="text-[64px]">Kian Verdugo</h1>
+            <h2 class="text-[48px] text-[#898989]">© 2026 | All rights reserved.</h2>
+          </div>
+          <div class="mx-20 my-10">
+            <h1 class="text-[64px]">Socials</h1>
+            <ul class="text-[40px] text-[#898989]">
+              <li><a href="www.linkedin.com/in/kian-verdugo-85708b41b">LinkedIn</a></li>
+              <li><a href="https://github.com/Sternaldesert">Github</a></li>
+              <!-- <li><a href="">Youtube</a></li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 </body>
