@@ -4,7 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://jsdelivr.net"></script>
   <link rel="stylesheet" href="style.css">
+  <script src="tailwind.config.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</style>
 </head>
 
 <body class="bg-[#060606]">
@@ -20,15 +29,18 @@
 
   <main>
     <!-- Hero Section -->
-    <section id="Home" class="flex min-h-screen items-center justify-between">
+    <section id="Home" class="flex min-h-screen items-center justify-between bg-[linear-gradient(to_right,#ffffff33_1px,transparent_1px),linear-gradient(to_bottom,#ffffff33_1px,transparent_1px)] bg-size-[36px_36px]">
       <div class="flex-col">
         <div class="ml-40">
-          <h1 class="max-w-[1030px] font-kavoon text-[96px] font-bold leading-30 text-white">
-            <span class="text-[#DE4747]">Magical</span>
-            <span>Ideas</span>
-            <span>Professional</span>
-            <span class="text-[#DE4747]">Products</span>
-          </h1>
+          <div class="font-kavoon text-[96px] font-bold leading-[1.05] text-white my-5">
+            <h1>
+              <span class="text-[#DE4747]">Magical</span>
+              <span>Ideas</span>
+              <h1>Professional
+                <span class="text-[#DE4747]">Products</span>
+              </h1>
+            </h1>
+          </div>
           
           <p class="text-[48px] text-slate-200/70">
             Hi, I’m Kian Verdugo. I design the unique,<br> code the future, and build the impossible.
@@ -45,34 +57,34 @@
     
     <!-- Has short summaries of tasks I preform -->
     <section class="h-auto mt-22 mb-30" id="About">
-      <h1 class="text-[#DE4747] text-[96px] font-bold flex justify-center">What I do</h1>
+      <h1 class="text-[#DE4747] text-[96px] font-iosevka-charon-mono flex justify-center">What I do</h1>
 
       <div class="flex justify-center gap-20">
         <div class="border border-[#898989] rounded-[25px] wrap-break-words text-white px-8 py-14 w-[300px]">
           <img src="/imgs/Paintbrush.png" class="h-16 w-16">
-          <h1>UI & UX</h1>
+          <h1 class="my-3">UI & UX</h1>
           <p>Designing interfaces that are intuitive, efficient, and enjoyable to use.</p>
         </div>
         <div class="border border-[#898989] rounded-[25px] wrap-break-words text-white px-8 py-14 w-[300px]">
           <img src="/imgs/Paintbrush.png" class="h-16 w-16">
-          <h1>UI & UX</h1>
+          <h1 class="my-3">UI & UX</h1>
           <p>Designing interfaces that are intuitive, efficient, and enjoyable to use.</p>
         </div>
         <div class="border border-[#898989] rounded-[25px] wrap-break-words text-white px-8 py-14 w-[300px]">
           <img src="/imgs/Paintbrush.png" class="h-16 w-16">
-          <h1>UI & UX</h1>
+          <h1 class="my-3">UI & UX</h1>
           <p>Designing interfaces that are intuitive, efficient, and enjoyable to use.</p>
         </div>
         <div class="border border-[#898989] rounded-[25px] wrap-break-words text-white px-8 py-14 w-[300px]">
           <img src="/imgs/Paintbrush.png" class="h-16 w-16">
-          <h1>UI & UX</h1>
+          <h1 class="my-3">UI & UX</h1>
           <p>Designing interfaces that are intuitive, efficient, and enjoyable to use.</p>
         </div>
       </div>
     </section>
 
     <section class="min-h-screen mx-40" id="Work">
-      <h1 class="text-[#DE4747] text-[96px] font-bold flex justify-start">My Projects</h1>
+      <h1 class="text-[#DE4747] text-[96px] font-iosevka-charon-mono flex justify-start">My Projects</h1>
 
       <!-- Creates sectioning for every project -->
       <div class="flex-col items-center">
@@ -157,18 +169,18 @@
       </div>
 
       <!-- Load More button -->
-      <a href="/Projects.html" class="my-15 mx-auto flex w-fit items-center justify-center gap-6 rounded-[50px] border border-[#464646] bg-[#060606] px-8 py-4">
+      <!-- <a href="/Projects.html" class="mt-15 mx-auto flex w-fit items-center justify-center gap-6 rounded-[50px] border border-[#464646] bg-[#060606] px-8 py-4">
         <span class="text-[40px] text-white">Load More</span>
         <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="64" height="100%" overflow="visible" viewBox="0 0 62 29.4558" fill="none">
           <path id="Arrow 1" d="M61.4142 16.1421C62.1953 15.3611 62.1953 14.0948 61.4142 13.3137L48.6863 0.585787C47.9052 -0.195262 46.6389 -0.195262 45.8579 0.585787C45.0768 1.36684 45.0768 2.63317 45.8579 3.41421L57.1716 14.7279L45.8579 26.0416C45.0768 26.8227 45.0768 28.089 45.8579 28.8701C46.6389 29.6511 47.9052 29.6511 48.6863 28.8701L61.4142 16.1421ZM0 14.7279V16.7279H60V14.7279V12.7279H0V14.7279Z" fill="var(--stroke-0, white)"/>
         </svg>
-      </a>
+      </a> -->
     </section>
-
-    <section class="mx-40 my-40" id="Technology">
-      <h1 class="text-[#DE4747] text-[96px] font-bold flex justify-center">Current Techstack</h1>
-      <div class="overflow-x-auto my-15 scrollbar-none flex justify-center">
-        <div class="flex flex-row gap-8 animate-bounce">
+    
+    <section class="mx-40 my-50" id="Technology">
+      <h1 class="text-[#DE4747] text-[96px] font-iosevka-charon-mono flex justify-center">Current Techstack</h1>
+      <div class="overflow-hidden my-15 scrollbar-none flex justify-center">
+        <div class="flex flex-row gap-8 justify-center items-center animate-loop-scroll">
           <img src="/imgs/HTML Logo.png" class="w-64">
           <img src="/imgs/CSS Logo.png" class="w-64">
           <img src="/imgs/JavaScript Logo.png" class="w-64">
