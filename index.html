@@ -16,7 +16,7 @@
 </head>
 
 <body class="bg-[#060606]">
-  <div class="fixed left-1/2 -translate-x-1/2 top-8 border-2 border-[#464646] rounded-[25px] bg-[#060606] z-999 px-5 py-3">
+  <div class="hidden md:flex fixed left-1/2 -translate-x-1/2 top-8 border-2 border-[#464646] rounded-[25px] bg-[#060606] z-999 px-5 py-3">
     <div class="flex justify-center items-center text-center text-white gap-6 text-[36px]">
       <a href="#Home" class="transition-colors duration-200 hover:text-[#898989]">Home</a>
       <a href="#About" class="transition-colors duration-200 hover:text-[#898989]">About</a>
@@ -24,23 +24,40 @@
       <a href="#Contact" class="transition-colors duration-200 hover:text-[#898989]">Contact</a>
     </div>
   </div>
+  <button class="block md:hidden text-white m-5">
+    <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://w3.org"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+  </button>
+
+  <div id="mobile-menu" class="fixed inset-0 bg-[#060606]/95 z-999 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center gap-8 text-[32px] text-white">
+    <button id="close-btn" class="absolute top-10 right-8 text-white focus:outline-none">
+      <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://w3.org">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+  </button>
+  
+  <a href="#Home" class="mobile-link transition-colors duration-200 hover:text-[#898989]">Home</a>
+  <a href="#About" class="mobile-link transition-colors duration-200 hover:text-[#898989]">About</a>
+  <a href="#Work" class="mobile-link transition-colors duration-200 hover:text-[#898989]">Work</a>
+  <a href="#Contact" class="mobile-link transition-colors duration-200 hover:text-[#898989]">Contact</a>
+  </div>
   
   <main class="flex flex-col">
-    <div class="max-w-400 mx-auto w-full">
+    <div class="max-w-full md:max-w-400 mx-auto w-full">
       <!-- Hero Section -->
       <section id="Home" class="flex min-h-screen items-center justify-between">
+        <div class="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-size-[24px_24px]"></div>
         <div>
-            <div class="font-kavoon text-[86.4px] font-bold leading-[1.05] text-white my-5">
-              <h1><span class="text-[#DE4747]">Magical</span> <span>Ideas</span></h1>
-              <h1><span>Professional</span> <span class="text-[#DE4747]">Products</span></h1>
-            </div>
-            <p class="text-[48px] text-[#898989] font-inter wrap-break-word">Hi, I’m Kian Verdugo. I design the fascinating, code the future, and build the impossible.</p>
-            <a href="CV_en.pdf" download="CV_en.pdf" class="group my-15 flex w-fit items-center justify-center gap-6 rounded-[50px] border border-[#464646] bg-[#060606] px-8 py-4">
-              <img src="/imgs/Download.svg" alt="Download icon" class="h-10 w-10" aria-hidden="true">
-              <h2 class="text-[40px] text-white transition-colors duration-200 group-hover:text-[#898989]">Download CV<span class="text-white sr-only">(PDF)</span></h2>
-            </a>
+          <div class="font-kavoon text-[86.4px] font-bold leading-[1.05] text-white my-5">
+            <h1><span class="text-[#DE4747]">Magical</span> <span>Ideas</span></h1>
+            <h1><span>Professional</span> <span class="text-[#DE4747]">Products</span></h1>
           </div>
-          <img src="/imgs/HeadshotCropped.jpg" alt="Kian Verdugo Headshot" class="max-w-150 rounded-[25px] select-none" aria-hidden="true">
+          <p class="text-[48px] text-[#898989] font-inter wrap-break-word">Hi, I’m Kian Verdugo. I design the fascinating, code the future, and build the impossible.</p>
+          <a href="CV_en.pdf" download="CV_en.pdf" class="group my-15 flex w-fit items-center justify-center gap-6 rounded-[50px] border border-[#464646] bg-[#060606] px-8 py-4">
+            <img src="/imgs/Download.svg" alt="Download icon" class="h-10 w-10" aria-hidden="true">
+            <h2 class="text-[40px] text-white transition-colors duration-200 group-hover:text-[#898989]">Download CV<span class="text-white sr-only">(PDF)</span></h2>
+          </a>
+        </div>
+        <img src="/imgs/HeadshotCropped.jpg" alt="Kian Verdugo Headshot" class="max-w-150 rounded-[25px] select-none" aria-hidden="true">
       </section>
       
       <section id="About" class="pt-20">
