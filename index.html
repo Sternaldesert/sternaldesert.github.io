@@ -27,58 +27,64 @@
       </ul>
 
       <!-- Mobile button -->
-      <button class="md:hidden p-2" onclick="openSidebar()">
-        <svg class="w-10 h-10" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://w3.org"> 
+      <button class="md:hidden p-2" onclick="toggleSidebar(true)" aria-label="Open menu">
+        <svg class="w-10 h-10" fill="none" stroke="white" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> 
         </svg> 
       </button>
     </nav>
   </div>
+
+  <div id="Mobile-menu-blur" class="hidden md:hidden fixed inset-0 z-40 backdrop-blur-xs transition-opacity duration-300" onclick="toggleSidebar(false)"></div> 
   
-  <ul class="translate-full md:hidden fixed top-0 bottom-0 right-0 w-1/2 bg-black flex flex-col justify-center items-center text-center text-white gap-8 text-4xl z-40 border-l border-white/10">
-    <li><a href="#Home" class="transition-colors duration-200 hover:text-[#898989]">Home</a></li>
-    <li><a href="#About" class="transition-colors duration-200 hover:text-[#898989]">About</a></li>
-    <li><a href="#Work" class="transition-colors duration-200 hover:text-[#898989]">Work</a></li>
-    <li><a href="#Contact" class="transition-colors duration-200 hover:text-[#898989]">Contact</a></li>
+  <ul id="Mobile-menu" class="md:hidden fixed top-0 bottom-0 right-0 w-1/2 bg-[#060606] flex flex-col text-center text-white gap-8 text-4xl z-40 border-l border-[#464646] pt-20 transform translate-x-full duration-300"> 
+    <button class="absolute top-0 right-0 text-white m-4" onclick="toggleSidebar(false)" aria-label="Close Menu">
+      <img src="/imgs/Close Menu Icon.svg" alt="Close menu icon" class="w-12 md:w-16">
+    </button>
+    
+    <li><a href="#Home" onclick="toggleSidebar(false)" class="transition-colors duration-200 hover:text-[#898989]">Home</a></li> 
+    <li><a href="#About" onclick="toggleSidebar(false)" class="transition-colors duration-200 hover:text-[#898989]">About</a></li> 
+    <li><a href="#Work" onclick="toggleSidebar(false)" class="transition-colors duration-200 hover:text-[#898989]">Work</a></li> 
+    <li><a href="#Contact" onclick="toggleSidebar(false)" class="transition-colors duration-200 hover:text-[#898989]">Contact</a></li> 
   </ul>
 
   <main class="flex flex-col">
     <div class="max-w-[90dvw] md:max-w-400 mx-auto w-full">
       <!-- Hero Section -->
-      <section id="Home" class="flex flex-col-reverse md:flex-row min-h-dvh items-center justify-end md:justify-between"> 
+      <section id="Home" class="flex flex-col-reverse md:flex-row min-h-dvh items-center justify-end md:justify-between">
         <div class="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-size-[1.5rem_1.5rem] min-h-dvh"></div>
         <div>
-          <div class="font-kavoon text-5xl md:text-[86px] font-bold leading-[1.05] text-white my-5 text-center md:text-left"> 
+          <div class="font-kavoon text-5xl md:text-[86px] font-bold leading-[1.05] text-white md:my-5 text-center md:text-left">
             <h1><span class="text-[#DE4747]">Magical</span> <span>Ideas</span></h1> 
             <h1><span>Professional</span> <span class="text-[#DE4747]">Products</span></h1> 
           </div>
           <p class="text-center font-inter text-2xl text-[#898989] wrap-break-word md:text-left md:text-4xl md:max-w-4xl not-sm:my-5">Hi, I’m Kian Verdugo. I design the fascinating, code the future, and build the impossible.</p>
           <div class="flex justify-center md:justify-start">
             <a href="CV_en.pdf" download="CV_en.pdf" class="group my-5 md:my-15 flex w-fit items-center justify-center gap-6 rounded-[50px] border border-[#464646] bg-[#060606] px-8 py-4 not-sm:active:scale-95 "> 
-              <img src="/imgs/Download.svg" alt="Download icon" class="w-7 md:w-10" aria-hidden="true">
+              <img src="/imgs/Download Icon.svg" alt="Download icon" class="w-7 md:w-10" aria-hidden="true">
               <h2 class="text-3xl md:text-4xl text-white transition-colors duration-200 group-hover:text-[#898989]">Download CV<span class="text-white sr-only">(PDF)</span></h2> 
             </a>
           </div>
         </div>
-        <img src="/imgs/HeadshotCropped.jpg" alt="Kian Verdugo Headshot" class="w-full max-w-sm md:max-w-150 not-sm:my-5 rounded-[25px] select-none" aria-hidden="true">
+        <img src="/imgs/HeadshotCropped.jpg" alt="Kian Verdugo Headshot" class="w-full max-w-sm md:max-w-150 not-sm:my-5 rounded-[25px] select-none shrink" aria-hidden="true">
       </section>
       
       <section id="About" class="pt-18 md:pt-36">
         <h1 class="text-[#DE4747] text-5xl md:text-[86px] font-iosevka-charon-mono flex justify-center my-10">What I do</h1>
         <!-- Three cards with short summaries of tasks I preform -->
-        <div class="flex flex-col md:flex-row justify-center gap-5 md:gap-10">
+        <div class="flex flex-col md:flex-row justify-center gap-5 md:gap-10 shrink">
           <div class="flex md:max-w-185 md:min-w-131 flex-col items-center justify-evenly gap-10 wrap-break-words rounded-[25px] border border-[#898989] p-8 md:p-16 text-center text-white md:scale-90">
-            <img src="/imgs/Terminal.svg" alt="Command-line terminal icon" class="h-32 w-32 select-none" aria-hidden="true">
+            <img src="/imgs/Terminal Icon.svg" alt="Command-line terminal icon" class="h-16 w-16 md:h-32 md:w-32 select-none" aria-hidden="true">
             <h2 class="text-xl md:text-4xl">Programming</h2>
             <p class="text-xl md:text-4xl text-[#898989]">Engineering accessibility-focused and robust code that powers seamless web performance.</p>
           </div>
           <div class="flex md:max-w-185 md:min-w-131 flex-col items-center justify-evenly gap-10 wrap-break-words rounded-[25px] border border-[#898989] p-8 md:p-16 text-center text-white">
-            <img src="/imgs/Internet.svg" alt="Internet icon" class="h-32 w-32 select-none" aria-hidden="true">
+            <img src="/imgs/Internet Icon.svg" alt="Internet icon" class="h-16 w-16 md:h-32 md:w-32 select-none" aria-hidden="true">
             <h2 class="text-xl md:text-4xl">Web Development</h2>
             <p class="text-xl md:text-4xl text-[#898989]">Crafting natural digital environments that embrace creativity and modern conveniences.</p>
           </div>
           <div class="flex md:max-w-185 md:min-w-131 flex-col items-center justify-evenly gap-10 wrap-break-words rounded-[25px] border border-[#898989] p-8 md:p-16 text-center text-white md:scale-90">
-            <img src="/imgs/Paintbrush.svg" alt="Paintbrush icon" class="h-32 w-32 select-none" aria-hidden="true">
+            <img src="/imgs/Paintbrush Icon.svg" alt="Paintbrush icon" class="h-16 w-16 md:h-32 md:w-32 select-none" aria-hidden="true">
             <h2 class="text-xl md:text-4xl">Graphic Design</h2>
             <p class="text-xl md:text-4xl text-[#898989]">Composing distinctive visual identities that capture attention and spark reaction.</p>
           </div>
@@ -88,21 +94,7 @@
       <section id="Work" class="pt-18 md:pt-36">
         <h1 class="text-[#DE4747] text-5xl md:text-[86px] font-iosevka-charon-mono flex justify-start my-5">My Projects</h1>
         <!-- Creates sectioning for every project -->
-        <div class="items-center will-change-transform">
-          <a href="https://docs.google.com/document/d/191LcDX-K5dPsV49qsqjzoIixUAX0SaJ2kkp-w8f2zXY/">
-            <div class="group border-y border-[#464646] py-8 px-6 md:p-12">
-              <div class="flex md:items-center md:justify-between md:flex-row flex-col-reverse">
-                <div class="flex flex-col">
-                  <h2 class="text-3xl md:text-5xl text-white duration-200 md:group-hover:translate-x-16">School-wide Newspaper</h2>
-                  <h3 class="text-2xl md:text-4xl text-[#898989] duration-300 md:group-hover:translate-x-16" aria-hidden="true">2026</h3>
-                </div>
-                <div class="hidden md:flex flex-col items-start duration-200 md:group-hover:-translate-x-16" aria-hidden="true">
-                  <h2 class="text-3xl md:text-5xl text-white">Writer</h2>
-                  <h3 class="text-2xl md:text-4xl text-[#898989]">Google Docs</h3>
-                </div>
-              </div>
-            </div>
-          </a>
+        <div class="items-center will-change-transform shrink">
           <a href="https://docs.google.com/presentation/d/13_G0Y7AKUjzrKPb0Sw4xMSCqvjTP9SWiLqsTOZ6KqPU/">
             <div class="group border-y border-[#464646] py-8 px-6 md:p-12">
               <div class="flex md:items-center md:justify-between md:flex-row flex-col-reverse">
@@ -146,30 +138,28 @@
         <h2 class="text-white sr-only">HTML, CSS, Javascript, Tailwind, VSCode, Python, Java, NODEJS, and Lua.</h2> 
         
         <div class="w-full overflow-hidden select-none mask-[linear-gradient(to_right,transparent_0,black_40%,black_60%,transparent_100%)]" aria-hidden="true"> 
-          <div class="flex w-max min-w-full gap-10 md:gap-20 will-change-transform animate-[scroll-right_10s_linear_infinite]">
-            <div class="flex flex-row justify-around items-center gap-10 md:gap-20 shrink-0"> 
-              <img src="/imgs/HTML Logo.svg" class="w-16 md:w-32" alt="HTML"> 
-              <img src="/imgs/CSS Logo.svg" class="w-16 md:w-32" alt="CSS"> 
-              <img src="/imgs/JavaScript Logo.svg" class="w-16 md:w-32" alt="JS"> 
-              <img src="/imgs/Java Logo.svg" class="w-16 md:w-32" alt="Java"> 
-              <img src="/imgs/Tailwind Logo.svg" class="w-16 md:w-32" alt="Tailwind"> 
-              <img src="/imgs/VSCode Logo.svg" class="w-16 md:w-32" alt="VSCode"> 
-              <img src="/imgs/Python Logo.svg" class="w-16 md:w-32" alt="Python"> 
-              <img src="/imgs/NodeJS Logo.svg" class="w-16 md:w-32" alt="NodeJS"> 
-              <img src="/imgs/Lua Logo.svg" class="w-16 md:w-32" alt="Lua"> 
+          <div class="flex w-max gap-10 md:gap-20 will-change-transform animate-[scroll-right_10s_linear_infinite]">
+            <div class="flex flex-row justify-around items-center gap-10 md:gap-20 shrink"> 
+              <img src="/imgs/HTML Logo.svg" class="h-16 w-16 md:h-32 md:w-32" alt="HTML"> 
+              <img src="/imgs/CSS Logo.svg" class="h-16 w-16 md:h-32 md:w-32" alt="CSS"> 
+              <img src="/imgs/JavaScript Logo.svg" class="h-16 w-16 md:h-32 md:w-32" alt="JS"> 
+              <img src="/imgs/Java Logo.svg" class="h-16 w-16 md:h-32 md:w-32" alt="Java"> 
+              <img src="/imgs/Tailwind Logo.svg" class="h-16 w-16 md:h-32 md:w-32" alt="Tailwind"> 
+              <img src="/imgs/VSCode Logo.svg" class="h-16 w-16 md:h-32 md:w-32" alt="VSCode"> 
+              <img src="/imgs/Python Logo.svg" class="h-16 w-16 md:h-32 md:w-32" alt="Python"> 
+              <img src="/imgs/NodeJS Logo.svg" class="h-16 w-16 md:h-32 md:w-32" alt="NodeJS"> 
             </div>
 
             <!-- Duplicate set to hide teleports / jitteriness -->
-            <div class="flex flex-row justify-around items-center gap-10 md:gap-20 shrink-0"> 
-              <img src="/imgs/HTML Logo.svg" class="w-16 md:w-32" alt="HTML"> 
-              <img src="/imgs/CSS Logo.svg" class="w-16 md:w-32" alt="CSS"> 
-              <img src="/imgs/JavaScript Logo.svg" class="w-16 md:w-32" alt="JS"> 
-              <img src="/imgs/Java Logo.svg" class="w-16 md:w-32" alt="Java"> 
-              <img src="/imgs/Tailwind Logo.svg" class="w-16 md:w-32" alt="Tailwind"> 
-              <img src="/imgs/VSCode Logo.svg" class="w-16 md:w-32" alt="VSCode"> 
-              <img src="/imgs/Python Logo.svg" class="w-16 md:w-32" alt="Python"> 
-              <img src="/imgs/NodeJS Logo.svg" class="w-16 md:w-32" alt="NodeJS"> 
-              <img src="/imgs/Lua Logo.svg" class="w-16 md:w-32" alt="Lua"> 
+            <div class="flex flex-row justify-around items-center gap-10 md:gap-20 shrink"> 
+              <img src="/imgs/HTML Logo.svg" class="h-16 w-16 md:h-32 md:w-32" alt="HTML"> 
+              <img src="/imgs/CSS Logo.svg" class="h-16 w-16 md:h-32 md:w-32" alt="CSS"> 
+              <img src="/imgs/JavaScript Logo.svg" class="h-16 w-16 md:h-32 md:w-32" alt="JS"> 
+              <img src="/imgs/Java Logo.svg" class="h-16 w-16 md:h-32 md:w-32" alt="Java"> 
+              <img src="/imgs/Tailwind Logo.svg" class="h-16 w-16 md:h-32 md:w-32" alt="Tailwind"> 
+              <img src="/imgs/VSCode Logo.svg" class="h-16 w-16 md:h-32 md:w-32" alt="VSCode"> 
+              <img src="/imgs/Python Logo.svg" class="h-16 w-16 md:h-32 md:w-32" alt="Python"> 
+              <img src="/imgs/NodeJS Logo.svg" class="h-16 w-16 md:h-32 md:w-32" alt="NodeJS"> 
             </div>
           </div>
         </div>
@@ -179,19 +169,19 @@
         <h1 class="text-white sr-only">Contact</h1>
         <div class="border border-[#464646] rounded-t-[25px] text-white max-w-[90dvw] md:max-w-full">
           <div class="flex flex-col justify-center m-5 md:m-15 text-center md:text-left">
-            <h2 class="text-4xl md:text-6xl">Need help with a creative idea?</h2>
+            <h2 class="text-4xl md:text-6xl hidden md:block">Need help with a creative idea?</h2>
             <h2 class="text-4xl md:text-6xl">Contact me <a class="text-[#DE4747] underline transition-colors duration-200 hover:text-[#AC3737]" href="mailto:kianverdugo05@gmail.com">via email</a> to collaborate!</h2>
             <h2 class="text-white sr-only">Kianverdugo05@gmail.com</h2>
           </div>
           <!-- Social links portion -->
           <div class="border-t border-t-[#464646] flex md:justify-between md:p-5 px-5 md:px-10">
             <div class="my-3" aria-hidden="true">
-              <h1 class="text-4xl md:text-6xl my-2">Kian Verdugo</h1>
+              <h1 class="text-3xl md:text-6xl my-2">Kian Verdugo</h1>
               <h2 class="text-2xl md:text-5xl text-[#898989]">© 2026 | All rights reserved.</h2>
             </div>
             <div class="my-3">
-              <h1 class="text-4xl md:text-6xl my-2">Socials</h1>
-              <div class="text-3xl md:text-5xl text-[#898989] gap-3">
+              <h1 class="text-3xl md:text-6xl my-2">Socials</h1>
+              <div class="text-2xl md:text-5xl text-[#898989] gap-3">
                 <h2><a href="https://linkedin.com/in/kian-verdugo-85708b41b" class="transition-colors duration-200 hover:text-white">LinkedIn</a></h2>
                 <h2><a href="https://github.com/Sternaldesert" class="transition-colors duration-200 hover:text-white">Github</a></h2>
                 <!-- <li><a href="">Youtube</a></li> -->
