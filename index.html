@@ -34,18 +34,24 @@
     </nav>
   </div>
 
-  <div id="Mobile-menu-blur" class="hidden lg:hidden fixed inset-0 z-40 backdrop-blur-xs transition-opacity duration-300" onclick="toggleSidebar(false)"></div> 
-  
-  <ul id="Mobile-menu" class="lg:hidden fixed top-0 bottom-0 right-0 w-1/2 bg-[#060606] flex flex-col text-center text-white gap-8 text-4xl z-40 border-l border-[#464646] pt-20 transform translate-x-full duration-300"> 
-    <button class="absolute top-0 right-0 text-white m-4" onclick="toggleSidebar(false)" aria-label="Close Menu">
-      <img src="/imgs/Close Menu Icon.svg" alt="Close menu icon" class="w-12 lg:w-16">
-    </button>
+  <nav>
+    <div id="Mobile-menu-blur" class="hidden lg:hidden fixed inset-0 z-40 backdrop-blur-xs transition-opacity duration-300" onclick="toggleSidebar(false)"></div> 
     
-    <li><a href="#Home" onclick="toggleSidebar(false)" class="transition-colors duration-200 hover:text-[#898989]">Home</a></li> 
-    <li><a href="#About" onclick="toggleSidebar(false)" class="transition-colors duration-200 hover:text-[#898989]">About</a></li> 
-    <li><a href="#Work" onclick="toggleSidebar(false)" class="transition-colors duration-200 hover:text-[#898989]">Work</a></li> 
-    <li><a href="#Contact" onclick="toggleSidebar(false)" class="transition-colors duration-200 hover:text-[#898989]">Contact</a></li> 
-  </ul>
+    <ul id="Mobile-menu" class="lg:hidden fixed top-0 bottom-0 right-0 w-fit bg-[#060606]/99 text-center flex flex-col text-white text-[clamp(1.5rem,8vw,2.25rem)] z-40 border-l border-[#464646] pt-20 transform translate-x-full duration-300"> 
+      <button class="absolute top-0 right-0 text-white m-4" onclick="toggleSidebar(false)" aria-label="Close Menu">
+        <img src="/imgs/Close Menu Icon.svg" alt="Close menu icon" class="w-12 lg:w-16">
+      </button>
+
+      <ul class="flex flex-col gap-6">
+        <li><a href="#Home" onclick="toggleSidebar(false)" class="transition-colors duration-200 hover:text-[#898989]">Home</a></li>
+        <li><a href="#About" onclick="toggleSidebar(false)" class="transition-colors duration-200 hover:text-[#898989]">About</a></li> 
+        <li><a href="#Work" onclick="toggleSidebar(false)" class="transition-colors duration-200 hover:text-[#898989]">Work</a></li> 
+        <li><a href="#Contact" onclick="toggleSidebar(false)" class="transition-colors duration-200 hover:text-[#898989]">Contact</a></li>
+      </ul>
+
+      <footer class="w-full max-w-50 mt-auto mb-5 px-3 text-[clamp(1rem,4vw,2rem)] text-[#898989]">© 2026 | All rights reserved.</footer>
+    </ul>
+  </nav>
 
   <main class="flex flex-col">
     <div class="max-w-[90dvw] lg:max-w-400 mx-auto w-full">
