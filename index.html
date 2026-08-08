@@ -55,8 +55,11 @@
   <main class="flex flex-col">
     <div class="max-w-[90dvw] lg:max-w-400 mx-auto w-full">
       <!-- Hero Section -->
-      <section id="Home" class="flex flex-col-reverse lg:flex-row min-h-dvh items-center justify-end lg:justify-between">
-        <div class="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-size-[1.5rem_1.5rem] min-h-dvh"></div>
+      <section id="Home" class="overflow-hidden flex flex-col-reverse lg:flex-row min-h-dvh items-center justify-end lg:justify-between">
+        <!-- <div class="absolute inset-0 -z-10 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-size-[1.5rem_1.5rem] min-h-dvh"></div> -->
+
+        <canvas id="gridCanvas" class="absolute inset-0 -z-10 h-full w-full pointer-events-none"></canvas>
+
         <div>
           <div class="font-kavoon text-[clamp(3rem,8vw,5rem)] font-bold leading-[1.05] text-white lg:my-5 text-center lg:text-left">
             <h1><span class="text-[#DE4747]">Magical</span> <span>Ideas</span></h1> 
